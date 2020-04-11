@@ -1,3 +1,6 @@
+# ignore vscode settings
 *.vscode
+# ignore cmd file types
 *.cmd
+# ignore Folder
 \__pycache__
