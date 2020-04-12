@@ -5,3 +5,5 @@
 # ignore Folder
 \__pycache__
 .pytest_cache
+.ipynb
+.gitignore
