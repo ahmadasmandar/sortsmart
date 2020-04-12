@@ -7,10 +7,10 @@ from tkinter import filedialog
 root=tk.Tk()
 root.withdraw()
 file_path=filedialog.askdirectory()
-new_file="ahmad.txt"
-make_it=os.path.join(file_path,new_file)
-print(file_path)
-with open(make_it,"w") as f:
-    f.write("Hello World!")
-    f.close()
-
+with open("file_list.log","a") as flist:
+    with os.scandir(file_path) as entries:
+        for entry in entries:
+            print(entry.name)
+            flist.write(entry.name)
+            flist.write("\n")
+    flist.close()
